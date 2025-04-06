@@ -1,4 +1,5 @@
-import { Award, Briefcase, Code } from 'lucide-react';
+import { Book, Briefcase, Code } from 'lucide-react';
+import { CgBrowser } from 'react-icons/cg';
 import ScrollReveal from './ScrollReveal';
 
 const stats = [
@@ -12,21 +13,21 @@ const stats = [
   {
     value: '9+',
     label: 'Apps Built',
-    icon: Code,
+    icon: CgBrowser,
     color: 'bg-spring-blush/20',
     delay: 100,
   },
   {
-    value: '4+',
-    label: 'Years of React',
+    value: '3+',
+    label: 'Years in React',
     icon: Code,
     color: 'bg-spring-mint/20',
     delay: 200,
   },
   {
-    value: '3+',
-    label: 'Certifications',
-    icon: Award,
+    value: '∞',
+    label: 'Hours of Learning',
+    icon: Book,
     color: 'bg-spring-peach/20',
     delay: 300,
   },
