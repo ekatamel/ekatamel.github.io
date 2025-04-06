@@ -1,46 +1,78 @@
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import { SiGithub } from 'react-icons/si';
+import cfbScreenshot from '../assets/apps/cfbenchmarks.png';
+import classesScreenshot from '../assets/apps/classes.png';
+import fbsScreenshot from '../assets/apps/flyboardshowapp.png';
+import knowspreadScreenshot from '../assets/apps/knowspread.png';
+import pblScreenshot from '../assets/apps/pressboxlive.png';
 import ScrollReveal from './ScrollReveal';
 
 const projects = [
   {
-    title: 'Flyboard Show Platform',
+    title: 'FlyboardShow.cz Platform',
     description:
       'End-to-end platform for water activities business featuring voucher purchases, lesson reservations, and admin panel.',
-    image:
-      'https://images.unsplash.com/photo-1564419320461-6870880221ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
-    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js'],
-    liveUrl: 'https://flyboardshow.cz',
-    githubUrl: '#',
+    image: fbsScreenshot,
+    technologies: [
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'React Query',
+      'React Table',
+      'Formik',
+      'Chakra UI',
+      'Framer Motion',
+      'Stripe',
+    ],
+    liveUrl: 'https://app.flyboardshow.cz/',
+    githubUrl: 'https://github.com/ekatamel/flyboardshowcz_frontend',
   },
   {
     title: 'Cryptocurrency Benchmarks',
     description:
       'Public website with real-time cryptocurrency index streaming, optimized for SEO and core web vitals.',
-    image:
-      'https://images.unsplash.com/photo-1621761191319-c6fb62004040?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
-    technologies: ['Next.js', 'WebSockets', 'TypeScript', 'Material UI'],
+    image: cfbScreenshot,
+    technologies: [
+      'Next.js',
+      'TypeScript',
+      'WebSockets',
+      'TypeScript',
+      'Material UI',
+      'Tailwind CSS',
+      'amCharts',
+    ],
     liveUrl: 'https://cfbenchmarks.com',
-    githubUrl: '#',
   },
   {
     title: 'Opta Live Sports App',
     description:
       'Interactive UI for real-time sports data and analytics, serving over 1,000 professional sports teams and media companies.',
-    image:
-      'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
-    technologies: ['React', 'Next.js', 'D3.js', 'GraphQL'],
-    liveUrl: '#',
-    githubUrl: '#',
+    image: pblScreenshot,
+    technologies: [
+      'Next.js',
+      'TypeScript',
+      'Recharts',
+      'React-PDF',
+      'React Query',
+      'React Table',
+    ],
+    liveUrl: 'https://www.statsperform.com/opta-live/',
   },
   {
     title: 'Knowspread E-learning Platform',
     description:
       'Educational platform serving 35k annual users with interactive courses and personalized learning paths.',
-    image:
-      'https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80',
-    technologies: ['React', 'MongoDB', 'Express', 'Node.js'],
-    liveUrl: '#',
-    githubUrl: '#',
+    image: knowspreadScreenshot,
+    technologies: ['React', 'Redux', 'Tailwind CSS', 'i18next', 'React-pdf'],
+    liveUrl: 'https://app.knowspread.com/',
+  },
+  {
+    title: 'Classes.cz – Math Tutoring Services',
+    description:
+      'A side project for a friend, featuring a math tutoring website built with WordPress and integrated with the Amelia booking system for scheduling lessons.',
+    image: classesScreenshot,
+    technologies: ['WordPress', 'Amelia Booking System'],
+    liveUrl: 'https://classes.cz/',
   },
 ];
 
@@ -62,21 +94,21 @@ const ProjectsSection = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover object-center transition duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover object-top transition duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <div className="flex space-x-3">
-                      {project.githubUrl !== '#' && (
+                      {project.githubUrl && (
                         <a
                           href={project.githubUrl}
                           className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-spring-pink transition-colors"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <Github className="w-5 h-5" />
+                          <SiGithub className="w-5 h-5" />
                         </a>
                       )}
-                      {project.liveUrl !== '#' && (
+                      {project.liveUrl && (
                         <a
                           href={project.liveUrl}
                           className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-spring-pink transition-colors"

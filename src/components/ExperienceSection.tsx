@@ -1,4 +1,8 @@
-import { Briefcase } from 'lucide-react';
+import accentureLogo from '../assets/logo/accenture.png';
+import appliftingLogo from '../assets/logo/applifting.png';
+import fbsLogo from '../assets/logo/fbs.png';
+import krakenLogo from '../assets/logo/kraken.png';
+import statsPerformLogo from '../assets/logo/statsperform.png';
 import ScrollReveal from './ScrollReveal';
 
 const experiences = [
@@ -11,6 +15,8 @@ const experiences = [
       'Led end-to-end frontend development of a platform using React, implementing voucher purchases, lesson reservations, and admin panel built from scratch, which reduced manual operations by 80%.',
       'Created optimized platform experience, leading to 1,200+ voucher sales, 1,000+ reservations, and 9,500+ monthly users by EOY 2024.',
     ],
+    logo: fbsLogo,
+    bgImage: 'bg-black',
   },
   {
     title: 'Software Engineer',
@@ -21,6 +27,7 @@ const experiences = [
       'Built and maintained the public cfbenchmarks.com website using Next.js and WebSockets for real-time cryptocurrency index streaming, improving SEO and core web vitals, leading to a 25% increase in traffic and a 15% faster load time.',
       'Enhanced an internal automation tool by developing new algorithms for index calculation, reducing manual workload by 25% and improving operational accuracy.',
     ],
+    logo: krakenLogo,
   },
   {
     title: 'Software Engineer',
@@ -31,6 +38,7 @@ const experiences = [
       'Developed and enhanced the functionality of Opta Live app using React and Next.js, integrating real-time sports data and analytics to create interactive UI tailored for professional sports teams and media companies, serving over 1,000 clients.',
       'Performed sport data transformation and calculation to ensure accurate, efficient data representation, empowering fast, data-driven decisions.',
     ],
+    logo: statsPerformLogo,
   },
   {
     title: 'Medior Full Stack Developer',
@@ -41,6 +49,7 @@ const experiences = [
       'Contributed to the frontend development of Applifting web and internal employee management system, reducing manual HR operations.',
       'Engineered Knowspread e-learning platform in React, scaling user engagement to 35k annual users.',
     ],
+    logo: appliftingLogo,
   },
   {
     title: 'Product Owner',
@@ -52,6 +61,7 @@ const experiences = [
       'Defined and prioritized product backlog and use cases, streamlining workflows and enabling successful product launches in 20 countries.',
       'Designed and executed 100+ A/B tests to optimize UI/UX, driving a major increase in user acquisition.',
     ],
+    logo: accentureLogo,
   },
 ];
 
@@ -70,8 +80,14 @@ const ExperienceSection = () => {
               animationClass={`animate-fade-in-up`}
               threshold={0.6}
             >
-              <div className="absolute left-0 sm:left-4 top-2 w-8 h-8 rounded-full bg-white shadow-md border-2 border-spring-mint flex items-center justify-center">
-                <Briefcase className="w-4 h-4 text-spring-mint" />
+              <div
+                className={`absolute left-0 sm:left-3 top-2 w-10 h-10 rounded-full shadow-md border-2 border-spring-mint flex items-center justify-center ${exp.bgImage ?? 'bg-white'}`}
+              >
+                <img
+                  className="w-6 h-6 text-spring-mint object-contain"
+                  src={exp.logo}
+                  alt="Company logo"
+                />
               </div>
 
               <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100 transition-all duration-300 hover:shadow-md hover:border-spring-mint/30">
@@ -82,7 +98,7 @@ const ExperienceSection = () => {
                       {exp.company} | {exp.location}
                     </div>
                   </div>
-                  <span className="text-sm bg-spring-blush/20 px-3 py-1 rounded-full mt-1">
+                  <span className="text-sm bg-gray-200 px-3 py-1 rounded-full mt-1">
                     {exp.period}
                   </span>
                 </div>

@@ -14,7 +14,7 @@ const stats = [
     value: '9+',
     label: 'Apps Built',
     icon: CgBrowser,
-    color: 'bg-spring-blush/20',
+    color: 'bg-gray-200',
     delay: 100,
   },
   {
@@ -28,7 +28,7 @@ const stats = [
     value: '∞',
     label: 'Hours of Learning',
     icon: Book,
-    color: 'bg-spring-peach/20',
+    color: 'bg-spring-peach/30',
     delay: 300,
   },
 ];

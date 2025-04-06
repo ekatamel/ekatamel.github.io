@@ -1,4 +1,5 @@
-import { Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
+import { SiGithub, SiLinkedin } from 'react-icons/si';
 
 const ContactSection = () => {
   return (
@@ -18,7 +19,7 @@ const ContactSection = () => {
             <div className="space-y-4">
               <div className="flex items-center">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-sm mr-4">
-                  <Mail className="w-5 h-5 text-spring-lavender" />
+                  <Mail className="w-5 h-5 text-spring-mint" />
                 </div>
                 <div>
                   <h4 className="text-sm text-gray-500">Email</h4>
@@ -33,7 +34,7 @@ const ContactSection = () => {
 
               <div className="flex items-center">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-sm mr-4">
-                  <Phone className="w-5 h-5 text-spring-lavender" />
+                  <Phone className="w-5 h-5 text-spring-mint" />
                 </div>
                 <div>
                   <h4 className="text-sm text-gray-500">Phone</h4>
@@ -48,7 +49,7 @@ const ContactSection = () => {
 
               <div className="flex items-center">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-sm mr-4">
-                  <MapPin className="w-5 h-5 text-spring-lavender" />
+                  <MapPin className="w-5 h-5 text-spring-mint" />
                 </div>
                 <div>
                   <h4 className="text-sm text-gray-500">Location</h4>
@@ -64,7 +65,7 @@ const ContactSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Github className="w-5 h-5" />
+                <SiGithub className="w-5 h-5" />
               </a>
               <a
                 href="https://linkedin.com/in/ekaterinamelnichuk"
@@ -72,7 +73,7 @@ const ContactSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Linkedin className="w-5 h-5" />
+                <SiLinkedin className="w-5 h-5" />
               </a>
             </div>
           </div>

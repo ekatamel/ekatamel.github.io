@@ -29,7 +29,8 @@ import {
   SiTestinglibrary,
   SiTypescript,
 } from 'react-icons/si';
-import tanstackIcon from '../assets/tanstack.png';
+import figmaIcon from '../assets/logo/figma.svg';
+import tanstackIcon from '../assets/logo/tanstack.png';
 import ScrollReveal from './ScrollReveal';
 
 interface TechItem {
@@ -109,12 +110,16 @@ const otherTech: TechItem[] = [
   { name: 'GitLab', icon: <FaGitlab size={24} className="text-orange-600" /> },
   { name: 'SEO', icon: <Compass size={24} className="text-blue-500" /> },
   {
-    name: 'Analytics',
+    name: 'Web Analytics',
     icon: <BarChart size={24} className="text-green-500" />,
   },
   {
     name: 'Agile & Scrum',
     icon: <DiScrum size={24} className="text-blue-500" />,
+  },
+  {
+    name: 'Figma',
+    icon: <img src={figmaIcon} className="h-6 w-6" alt="Figma icon" />,
   },
 ];
 

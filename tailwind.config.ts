@@ -66,8 +66,6 @@ export default {
           lavender: ' #BDB2FF',
           mint: '#71d7aa',
           peach: '#FFD8C7',
-          pink: '#FFD8E4',
-          blush: '#FFB5CF',
           soft: '#F8F9FA',
           charcoal: '#333333',
         },
