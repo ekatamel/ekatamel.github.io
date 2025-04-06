@@ -30,15 +30,15 @@ const Navbar = () => {
     >
       <div className="container-section !py-0 flex justify-between items-center">
         <a href="#" className="text-xl font-semibold">
-          <span className="text-spring-mint">E</span>katerina
+          <span className="text-spring-blush">E</span>katerina
         </a>
         
         <div className="hidden md:flex space-x-8 text-sm font-medium">
-          <a href="#about" className="hover:text-spring-mint transition-colors">About</a>
-          <a href="#skills" className="hover:text-spring-mint transition-colors">Skills</a>
-          <a href="#experience" className="hover:text-spring-mint transition-colors">Experience</a>
-          <a href="#projects" className="hover:text-spring-mint transition-colors">Projects</a>
-          <a href="#contact" className="hover:text-spring-mint transition-colors">Contact</a>
+          <a href="#about" className="hover:text-spring-blush transition-colors">About</a>
+          <a href="#skills" className="hover:text-spring-blush transition-colors">Skills</a>
+          <a href="#experience" className="hover:text-spring-blush transition-colors">Experience</a>
+          <a href="#projects" className="hover:text-spring-blush transition-colors">Projects</a>
+          <a href="#contact" className="hover:text-spring-blush transition-colors">Contact</a>
         </div>
         
         <a href="#contact" className="btn-primary text-sm hidden md:block">

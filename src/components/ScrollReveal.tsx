@@ -4,9 +4,16 @@ import React, { useEffect, useRef } from 'react';
 interface ScrollRevealProps {
   children: React.ReactNode;
   className?: string;
+  animationClass?: string;
+  threshold?: number;
 }
 
-const ScrollReveal: React.FC<ScrollRevealProps> = ({ children, className }) => {
+const ScrollReveal: React.FC<ScrollRevealProps> = ({ 
+  children, 
+  className = '', 
+  animationClass = 'animate-fade-in',
+  threshold = 0.1
+}) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -22,7 +29,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({ children, className }) => {
       {
         root: null,
         rootMargin: '0px',
-        threshold: 0.1,
+        threshold: threshold,
       }
     );
 
@@ -35,10 +42,14 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({ children, className }) => {
         observer.unobserve(ref.current);
       }
     };
-  }, []);
+  }, [threshold]);
 
   return (
-    <div ref={ref} className={`scroll-reveal ${className || ''}`}>
+    <div 
+      ref={ref} 
+      className={`scroll-reveal ${className || ''}`}
+      data-animation-class={animationClass}
+    >
       {children}
     </div>
   );

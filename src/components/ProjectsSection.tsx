@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Github, ExternalLink } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 
 const projects = [
   {
@@ -44,52 +45,55 @@ const ProjectsSection = () => {
         <h2 className="section-title">Selected Projects</h2>
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div 
+            <ScrollReveal 
               key={index} 
-              className="card group overflow-hidden transform transition duration-300 hover:-translate-y-2 animate-fade-in"
-              style={{ animationDelay: `${index * 150}ms` }}
+              className="h-full"
+              animationClass={`animate-fade-in-up delay-[${index * 200}ms]`}
+              threshold={0.1}
             >
-              <div className="relative overflow-hidden h-64">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover object-center transition duration-500 group-hover:scale-110" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div className="flex space-x-3">
-                    {project.githubUrl !== '#' && (
-                      <a 
-                        href={project.githubUrl} 
-                        className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-spring-mint transition-colors"
-                        target="_blank" rel="noopener noreferrer"
-                      >
-                        <Github className="w-5 h-5" />
-                      </a>
-                    )}
-                    {project.liveUrl !== '#' && (
-                      <a 
-                        href={project.liveUrl} 
-                        className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-spring-mint transition-colors"
-                        target="_blank" rel="noopener noreferrer"
-                      >
-                        <ExternalLink className="w-5 h-5" />
-                      </a>
-                    )}
+              <div className="card group overflow-hidden transform transition duration-300 hover:-translate-y-2 h-full">
+                <div className="relative overflow-hidden h-64">
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="w-full h-full object-cover object-center transition duration-500 group-hover:scale-110" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <div className="flex space-x-3">
+                      {project.githubUrl !== '#' && (
+                        <a 
+                          href={project.githubUrl} 
+                          className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-spring-pink transition-colors"
+                          target="_blank" rel="noopener noreferrer"
+                        >
+                          <Github className="w-5 h-5" />
+                        </a>
+                      )}
+                      {project.liveUrl !== '#' && (
+                        <a 
+                          href={project.liveUrl} 
+                          className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-spring-pink transition-colors"
+                          target="_blank" rel="noopener noreferrer"
+                        >
+                          <ExternalLink className="w-5 h-5" />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, i) => (
+                      <span key={i} className="text-xs bg-spring-lavender/30 px-3 py-1 rounded-full">
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, i) => (
-                    <span key={i} className="text-xs bg-spring-lavender/30 px-3 py-1 rounded-full">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

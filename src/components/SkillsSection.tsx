@@ -1,73 +1,78 @@
 
 import React from 'react';
+import ScrollReveal from './ScrollReveal';
+import { 
+  Code2, Database, Palette, Globe, FileJson, Server, 
+  Workflow, TestTube, BarChart, GithubIcon, Compass, GitBranch
+} from 'lucide-react';
 
-const frontendSkills = [
-  { name: 'JavaScript', level: 90 },
-  { name: 'TypeScript', level: 85 },
-  { name: 'React', level: 90 },
-  { name: 'Next.js', level: 80 },
-];
-
-const backendSkills = [
-  { name: 'Node.js', level: 75 },
-  { name: 'PHP (Laravel)', level: 65 },
-  { name: 'REST APIs', level: 85 },
-  { name: 'GraphQL', level: 70 },
-];
-
-const stylingSkills = [
-  { name: 'Sass', level: 85 },
-  { name: 'Tailwind', level: 90 },
-  { name: 'MUI', level: 80 },
-  { name: 'Chakra UI', level: 75 },
-];
-
-const otherSkills = [
-  { name: 'Jest', level: 75 },
-  { name: 'SEO', level: 85 },
-  { name: 'A/B Testing', level: 80 },
-  { name: 'Product Management', level: 90 },
-];
-
-interface SkillBarProps {
+interface TechItem {
   name: string;
-  level: number;
-  index: number;
+  icon: React.ReactNode;
 }
 
-const SkillBar: React.FC<SkillBarProps> = ({ name, level, index }) => {
-  return (
-    <div className="mb-4" style={{ animationDelay: `${index * 100}ms` }}>
-      <div className="flex justify-between mb-1">
-        <span className="text-sm font-medium">{name}</span>
-        <span className="text-xs text-gray-500">{level}%</span>
-      </div>
-      <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-        <div 
-          className="h-full bg-spring-mint rounded-full" 
-          style={{ 
-            width: `${level}%`,
-            transition: 'width 1s ease-out',
-          }}
-        ></div>
-      </div>
-    </div>
-  );
-};
+const frontendTech: TechItem[] = [
+  { name: 'JavaScript', icon: <Code2 size={24} className="text-yellow-500" /> },
+  { name: 'TypeScript', icon: <Code2 size={24} className="text-blue-500" /> },
+  { name: 'React', icon: <Code2 size={24} className="text-sky-500" /> },
+  { name: 'Next.js', icon: <Globe size={24} className="text-black" /> },
+  { name: 'Redux', icon: <Workflow size={24} className="text-purple-500" /> },
+  { name: 'HTML5', icon: <Code2 size={24} className="text-orange-500" /> },
+  { name: 'CSS3', icon: <Palette size={24} className="text-blue-400" /> },
+];
+
+const backendTech: TechItem[] = [
+  { name: 'Node.js', icon: <Server size={24} className="text-green-600" /> },
+  { name: 'Nest.js', icon: <Server size={24} className="text-red-500" /> },
+  { name: 'PHP/Laravel', icon: <Code2 size={24} className="text-purple-600" /> },
+  { name: 'REST APIs', icon: <Globe size={24} className="text-gray-600" /> },
+  { name: 'GraphQL', icon: <FileJson size={24} className="text-pink-500" /> },
+  { name: 'SQL', icon: <Database size={24} className="text-blue-600" /> },
+];
+
+const stylingTech: TechItem[] = [
+  { name: 'Sass', icon: <Palette size={24} className="text-pink-500" /> },
+  { name: 'Tailwind', icon: <Palette size={24} className="text-cyan-500" /> },
+  { name: 'Material UI', icon: <Palette size={24} className="text-blue-500" /> },
+  { name: 'Chakra UI', icon: <Palette size={24} className="text-teal-500" /> },
+  { name: 'Styled Components', icon: <Palette size={24} className="text-pink-400" /> },
+];
+
+const otherTech: TechItem[] = [
+  { name: 'Jest', icon: <TestTube size={24} className="text-red-600" /> },
+  { name: 'RTL', icon: <TestTube size={24} className="text-red-500" /> },
+  { name: 'MongoDB', icon: <Database size={24} className="text-green-600" /> },
+  { name: 'PostgreSQL', icon: <Database size={24} className="text-blue-600" /> },
+  { name: 'Git', icon: <GitBranch size={24} className="text-orange-600" /> },
+  { name: 'GitHub', icon: <GithubIcon size={24} className="text-gray-800" /> },
+  { name: 'SEO', icon: <Compass size={24} className="text-blue-500" /> },
+  { name: 'Analytics', icon: <BarChart size={24} className="text-green-500" /> },
+];
 
 interface SkillCategoryProps {
   title: string;
-  skills: Array<{ name: string; level: number }>;
-  animationDirection: string;
+  items: TechItem[];
+  delay: number;
 }
 
-const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills, animationDirection }) => {
+const SkillCategory: React.FC<SkillCategoryProps> = ({ title, items, delay }) => {
   return (
-    <div className={`animate-${animationDirection}`}>
-      <h3 className="text-xl font-semibold mb-4">{title}</h3>
-      {skills.map((skill, index) => (
-        <SkillBar key={skill.name} name={skill.name} level={skill.level} index={index} />
-      ))}
+    <div className="mb-10">
+      <h3 className="text-xl font-semibold mb-6 text-spring-charcoal">{title}</h3>
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
+        {items.map((item, index) => (
+          <ScrollReveal 
+            key={item.name} 
+            className="flex flex-col items-center"
+            animationClass={`animate-pop-in delay-[${(index * 100) + delay}ms]`}
+          >
+            <div className="tech-icon mb-2">
+              {item.icon}
+            </div>
+            <span className="text-xs text-center">{item.name}</span>
+          </ScrollReveal>
+        ))}
+      </div>
     </div>
   );
 };
@@ -77,12 +82,10 @@ const SkillsSection = () => {
     <section id="skills" className="py-20">
       <div className="container-section">
         <h2 className="section-title">My Tech Stack</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-          <SkillCategory title="Frontend" skills={frontendSkills} animationDirection="slide-in-left" />
-          <SkillCategory title="Backend" skills={backendSkills} animationDirection="fade-in" />
-          <SkillCategory title="Styling" skills={stylingSkills} animationDirection="fade-in" />
-          <SkillCategory title="Other" skills={otherSkills} animationDirection="slide-in-right" />
-        </div>
+        <SkillCategory title="Frontend" items={frontendTech} delay={0} />
+        <SkillCategory title="Backend" items={backendTech} delay={200} />
+        <SkillCategory title="Styling" items={stylingTech} delay={400} />
+        <SkillCategory title="Other" items={otherTech} delay={600} />
       </div>
     </section>
   );

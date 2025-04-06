@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Briefcase } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 
 const experiences = [
   {
@@ -62,25 +63,26 @@ const ExperienceSection = () => {
       <div className="container-section">
         <h2 className="section-title">Professional Experience</h2>
         <div className="relative">
-          <div className="absolute left-4 sm:left-8 top-0 bottom-0 w-0.5 bg-spring-mint"></div>
+          <div className="absolute left-4 sm:left-8 top-0 bottom-0 w-0.5 bg-spring-pink"></div>
           
           {experiences.map((exp, index) => (
-            <div 
+            <ScrollReveal 
               key={index} 
-              className="relative pl-12 sm:pl-16 pb-12 animate-fade-in"
-              style={{ animationDelay: `${index * 150}ms` }}
+              className="relative pl-12 sm:pl-16 pb-12"
+              animationClass={`animate-fade-in-up delay-[${index * 150}ms]`}
+              threshold={0.15}
             >
-              <div className="absolute left-0 sm:left-4 top-2 w-8 h-8 rounded-full bg-white shadow-md border-2 border-spring-mint flex items-center justify-center">
-                <Briefcase className="w-4 h-4 text-spring-mint" />
+              <div className="absolute left-0 sm:left-4 top-2 w-8 h-8 rounded-full bg-white shadow-md border-2 border-spring-pink flex items-center justify-center">
+                <Briefcase className="w-4 h-4 text-spring-pink" />
               </div>
               
-              <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
+              <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100 transition-all duration-300 hover:shadow-md hover:border-spring-pink/30">
                 <div className="flex flex-wrap justify-between items-start mb-4">
                   <div>
                     <h3 className="text-xl font-semibold">{exp.title}</h3>
                     <div className="text-gray-600 mb-1">{exp.company} | {exp.location}</div>
                   </div>
-                  <span className="text-sm bg-spring-mint/20 px-3 py-1 rounded-full mt-1">
+                  <span className="text-sm bg-spring-pink/20 px-3 py-1 rounded-full mt-1">
                     {exp.period}
                   </span>
                 </div>
@@ -93,7 +95,7 @@ const ExperienceSection = () => {
                   ))}
                 </ul>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
