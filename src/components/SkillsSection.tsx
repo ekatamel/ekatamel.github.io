@@ -1,18 +1,35 @@
-import {
-  BarChart,
-  Code2,
-  Compass,
-  Database,
-  FileJson,
-  GitBranch,
-  GithubIcon,
-  Globe,
-  Palette,
-  Server,
-  TestTube,
-  Workflow,
-} from 'lucide-react';
+import { BarChart, Compass, Database, Globe } from 'lucide-react';
 import React from 'react';
+import { DiScrum } from 'react-icons/di';
+import {
+  FaCss3Alt,
+  FaGithub,
+  FaGitlab,
+  FaHtml5,
+  FaLaravel,
+  FaNodeJs,
+  FaPhp,
+  FaReact,
+  FaSass,
+} from 'react-icons/fa';
+import {
+  SiChakraui,
+  SiGit,
+  SiGraphql,
+  SiJavascript,
+  SiJest,
+  SiMongodb,
+  SiMui,
+  SiNestjs,
+  SiNextdotjs,
+  SiPostgresql,
+  SiRedux,
+  SiStyledcomponents,
+  SiTailwindcss,
+  SiTestinglibrary,
+  SiTypescript,
+} from 'react-icons/si';
+import tanstackIcon from '../assets/tanstack.png';
 import ScrollReveal from './ScrollReveal';
 
 interface TechItem {
@@ -21,55 +38,83 @@ interface TechItem {
 }
 
 const frontendTech: TechItem[] = [
-  { name: 'JavaScript', icon: <Code2 size={24} className="text-yellow-500" /> },
-  { name: 'TypeScript', icon: <Code2 size={24} className="text-blue-500" /> },
-  { name: 'React', icon: <Code2 size={24} className="text-sky-500" /> },
-  { name: 'Next.js', icon: <Globe size={24} className="text-black" /> },
-  { name: 'Redux', icon: <Workflow size={24} className="text-purple-500" /> },
-  { name: 'HTML5', icon: <Code2 size={24} className="text-orange-500" /> },
-  { name: 'CSS3', icon: <Palette size={24} className="text-blue-400" /> },
+  {
+    name: 'JavaScript',
+    icon: <SiJavascript size={24} className="text-yellow-400" />,
+  },
+  {
+    name: 'TypeScript',
+    icon: <SiTypescript size={24} className="text-blue-500" />,
+  },
+  { name: 'React', icon: <FaReact size={24} className="text-sky-500" /> },
+  { name: 'Next.js', icon: <SiNextdotjs size={24} className="text-black" /> },
+  { name: 'Redux', icon: <SiRedux size={24} className="text-purple-500" /> },
+  { name: 'HTML5', icon: <FaHtml5 size={24} className="text-orange-500" /> },
+  { name: 'CSS3', icon: <FaCss3Alt size={24} className="text-blue-400" /> },
+  {
+    name: 'TanStack',
+    icon: <img src={tanstackIcon} className="h-6 w-6" alt="TanStack icon" />,
+  },
 ];
 
 const backendTech: TechItem[] = [
-  { name: 'Node.js', icon: <Server size={24} className="text-green-600" /> },
-  { name: 'Nest.js', icon: <Server size={24} className="text-red-500" /> },
+  { name: 'Node.js', icon: <FaNodeJs size={24} className="text-green-600" /> },
+  { name: 'Nest.js', icon: <SiNestjs size={24} className="text-red-500" /> },
   {
-    name: 'PHP/Laravel',
-    icon: <Code2 size={24} className="text-purple-600" />,
+    name: 'PHP',
+    icon: <FaPhp size={24} className="text-purple-600" />,
+  },
+  {
+    name: 'Laravel',
+    icon: <FaLaravel size={24} className="text-red-600" />,
   },
   { name: 'REST APIs', icon: <Globe size={24} className="text-gray-600" /> },
-  { name: 'GraphQL', icon: <FileJson size={24} className="text-pink-500" /> },
+  { name: 'GraphQL', icon: <SiGraphql size={24} className="text-pink-500" /> },
   { name: 'SQL', icon: <Database size={24} className="text-blue-600" /> },
 ];
 
 const stylingTech: TechItem[] = [
-  { name: 'Sass', icon: <Palette size={24} className="text-pink-500" /> },
-  { name: 'Tailwind', icon: <Palette size={24} className="text-cyan-500" /> },
+  { name: 'Sass', icon: <FaSass size={24} className="text-pink-500" /> },
+  {
+    name: 'Tailwind',
+    icon: <SiTailwindcss size={24} className="text-cyan-500" />,
+  },
   {
     name: 'Material UI',
-    icon: <Palette size={24} className="text-blue-500" />,
+    icon: <SiMui size={24} className="text-blue-500" />,
   },
-  { name: 'Chakra UI', icon: <Palette size={24} className="text-teal-500" /> },
+  {
+    name: 'Chakra UI',
+    icon: <SiChakraui size={24} className="text-teal-500" />,
+  },
   {
     name: 'Styled Components',
-    icon: <Palette size={24} className="text-pink-400" />,
+    icon: <SiStyledcomponents size={30} className="text-pink-400" />,
   },
 ];
 
 const otherTech: TechItem[] = [
-  { name: 'Jest', icon: <TestTube size={24} className="text-red-600" /> },
-  { name: 'RTL', icon: <TestTube size={24} className="text-red-500" /> },
-  { name: 'MongoDB', icon: <Database size={24} className="text-green-600" /> },
+  { name: 'Jest', icon: <SiJest size={24} className="text-red-600" /> },
+  {
+    name: 'React Testing Library',
+    icon: <SiTestinglibrary size={24} className="text-red-500" />,
+  },
+  { name: 'MongoDB', icon: <SiMongodb size={24} className="text-green-600" /> },
   {
     name: 'PostgreSQL',
-    icon: <Database size={24} className="text-blue-600" />,
+    icon: <SiPostgresql size={24} className="text-blue-600" />,
   },
-  { name: 'Git', icon: <GitBranch size={24} className="text-orange-600" /> },
-  { name: 'GitHub', icon: <GithubIcon size={24} className="text-gray-800" /> },
+  { name: 'Git', icon: <SiGit size={24} className="text-orange-600" /> },
+  { name: 'GitHub', icon: <FaGithub size={24} className="text-gray-800" /> },
+  { name: 'GitLab', icon: <FaGitlab size={24} className="text-orange-600" /> },
   { name: 'SEO', icon: <Compass size={24} className="text-blue-500" /> },
   {
     name: 'Analytics',
     icon: <BarChart size={24} className="text-green-500" />,
+  },
+  {
+    name: 'Agile & Scrum',
+    icon: <DiScrum size={24} className="text-blue-500" />,
   },
 ];
 
@@ -115,7 +160,7 @@ const SkillsSection = () => {
   return (
     <section id="skills" className="py-20">
       <div className="container-section">
-        <h2 className="section-title">My Tech Stack</h2>
+        <h2 className="section-title">Tech Stack</h2>
         <SkillCategory title="Frontend" items={frontendTech} delay={0} />
         <SkillCategory title="Backend" items={backendTech} delay={200} />
         <SkillCategory title="Styling" items={stylingTech} delay={400} />

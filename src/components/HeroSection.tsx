@@ -1,6 +1,7 @@
 import { Mail } from 'lucide-react';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 
+// TODO: animation for underlime
 const HeroSection = () => {
   return (
     <section
@@ -43,16 +44,14 @@ const HeroSection = () => {
             {/* TODO make shared style for ul list */}
             <ul className="text-lg text-gray-600 mb-8">
               <li className="text-gray-600 pl-5 relative before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-spring-lavender before:rounded-full">
-                <i>Boosting performance</i> (cutting load times, optimizing Web
+                Boosting performance (cutting load times, optimizing Web
                 Vitals),
               </li>
               <li className="text-gray-600 pl-5 relative before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-spring-lavender before:rounded-full">
-                <i>Automating workflows</i> (replacing manual work with scalable
-                code),
+                Automating workflows (replacing manual work with scalable code),
               </li>
               <li className="text-gray-600 pl-5 relative before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-spring-lavender before:rounded-full">
-                <i>Driving growth</i> (A/B tested UI, SEO wins, and user
-                acquisition)
+                Driving growth (A/B tested UI, SEO wins, and user acquisition)
               </li>
             </ul>
 
