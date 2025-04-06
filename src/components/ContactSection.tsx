@@ -1,5 +1,4 @@
-import React from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 
 const ContactSection = () => {
   return (
@@ -19,13 +18,13 @@ const ContactSection = () => {
             <div className="space-y-4">
               <div className="flex items-center">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-sm mr-4">
-                  <Mail className="w-5 h-5 text-spring-mint" />
+                  <Mail className="w-5 h-5 text-spring-lavender" />
                 </div>
                 <div>
                   <h4 className="text-sm text-gray-500">Email</h4>
                   <a
                     href="mailto:eka.melnichuk@gmail.com"
-                    className="text-lg hover:text-spring-mint transition-colors"
+                    className="text-lg hover:text-spring-lavender transition-colors"
                   >
                     eka.melnichuk@gmail.com
                   </a>
@@ -34,13 +33,13 @@ const ContactSection = () => {
 
               <div className="flex items-center">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-sm mr-4">
-                  <Phone className="w-5 h-5 text-spring-mint" />
+                  <Phone className="w-5 h-5 text-spring-lavender" />
                 </div>
                 <div>
                   <h4 className="text-sm text-gray-500">Phone</h4>
                   <a
                     href="tel:+420775992148"
-                    className="text-lg hover:text-spring-mint transition-colors"
+                    className="text-lg hover:text-spring-lavender transition-colors"
                   >
                     +420 775 992 148
                   </a>
@@ -49,7 +48,7 @@ const ContactSection = () => {
 
               <div className="flex items-center">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-sm mr-4">
-                  <MapPin className="w-5 h-5 text-spring-mint" />
+                  <MapPin className="w-5 h-5 text-spring-lavender" />
                 </div>
                 <div>
                   <h4 className="text-sm text-gray-500">Location</h4>
@@ -61,7 +60,7 @@ const ContactSection = () => {
             <div className="mt-8 flex space-x-4">
               <a
                 href="https://github.com/ekatamel"
-                className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-sm hover:bg-spring-mint hover:text-white transition-colors"
+                className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-sm hover:bg-spring-lavender hover:text-white transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -69,7 +68,7 @@ const ContactSection = () => {
               </a>
               <a
                 href="https://linkedin.com/in/ekaterinamelnichuk"
-                className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-sm hover:bg-spring-mint hover:text-white transition-colors"
+                className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-sm hover:bg-spring-lavender hover:text-white transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -91,7 +90,7 @@ const ContactSection = () => {
                 <input
                   type="text"
                   id="name"
-                  className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-spring-mint focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-spring-lavender focus:border-transparent"
                   placeholder="Your name"
                 />
               </div>
@@ -106,7 +105,7 @@ const ContactSection = () => {
                 <input
                   type="email"
                   id="email"
-                  className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-spring-mint focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-spring-lavender focus:border-transparent"
                   placeholder="Your email"
                 />
               </div>
@@ -121,7 +120,7 @@ const ContactSection = () => {
                 <textarea
                   id="message"
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-spring-mint focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-spring-lavender focus:border-transparent"
                   placeholder="Your message"
                 ></textarea>
               </div>

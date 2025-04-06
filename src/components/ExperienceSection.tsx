@@ -1,4 +1,3 @@
-import React from 'react';
 import { Briefcase } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 
@@ -62,7 +61,7 @@ const ExperienceSection = () => {
       <div className="container-section">
         <h2 className="section-title">Professional Experience</h2>
         <div className="relative">
-          <div className="absolute left-4 sm:left-8 top-0 bottom-0 w-0.5 bg-spring-lavender"></div>
+          <div className="absolute left-4 sm:left-8 top-0 bottom-0 w-0.5 bg-spring-mint"></div>
 
           {experiences.map((exp, index) => (
             <ScrollReveal
@@ -71,11 +70,11 @@ const ExperienceSection = () => {
               animationClass={`animate-fade-in-up`}
               threshold={0.15}
             >
-              <div className="absolute left-0 sm:left-4 top-2 w-8 h-8 rounded-full bg-white shadow-md border-2 border-spring-lavender flex items-center justify-center">
-                <Briefcase className="w-4 h-4 text-spring-lavender" />
+              <div className="absolute left-0 sm:left-4 top-2 w-8 h-8 rounded-full bg-white shadow-md border-2 border-spring-mint flex items-center justify-center">
+                <Briefcase className="w-4 h-4 text-spring-mint" />
               </div>
 
-              <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100 transition-all duration-300 hover:shadow-md hover:border-spring-lavender/30">
+              <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100 transition-all duration-300 hover:shadow-md hover:border-spring-mint/30">
                 <div className="flex flex-wrap justify-between items-start mb-4">
                   <div>
                     <h3 className="text-xl font-semibold">{exp.title}</h3>
@@ -83,7 +82,7 @@ const ExperienceSection = () => {
                       {exp.company} | {exp.location}
                     </div>
                   </div>
-                  <span className="text-sm bg-spring-peach/20 px-3 py-1 rounded-full mt-1">
+                  <span className="text-sm bg-spring-blush/20 px-3 py-1 rounded-full mt-1">
                     {exp.period}
                   </span>
                 </div>
@@ -92,7 +91,7 @@ const ExperienceSection = () => {
                   {exp.responsibilities.map((item, i) => (
                     <li
                       key={i}
-                      className="text-gray-600 pl-5 relative before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-spring-mint before:rounded-full"
+                      className="text-gray-600 pl-5 relative before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-spring-lavender before:rounded-full"
                     >
                       {item}
                     </li>

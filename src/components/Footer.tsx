@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -9,8 +7,8 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row justify-between items-center">
           <div className="mb-4 sm:mb-0">
             <a href="#" className="text-xl font-semibold">
-              <span className="text-spring-lavender">E</span>katerina{' '}
-              <span className="text-spring-lavender">M</span>elnichuk
+              <span className="text-spring-mint">E</span>katerina{' '}
+              <span className="text-spring-mint">M</span>elnichuk
             </a>
           </div>
 

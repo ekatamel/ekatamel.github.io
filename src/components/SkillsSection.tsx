@@ -1,19 +1,19 @@
+import {
+  BarChart,
+  Code2,
+  Compass,
+  Database,
+  FileJson,
+  GitBranch,
+  GithubIcon,
+  Globe,
+  Palette,
+  Server,
+  TestTube,
+  Workflow,
+} from 'lucide-react';
 import React from 'react';
 import ScrollReveal from './ScrollReveal';
-import {
-  Code2,
-  Database,
-  Palette,
-  Globe,
-  FileJson,
-  Server,
-  Workflow,
-  TestTube,
-  BarChart,
-  GithubIcon,
-  Compass,
-  GitBranch,
-} from 'lucide-react';
 
 interface TechItem {
   name: string;
@@ -94,7 +94,7 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({
         {title}
       </h3>
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
-        {items.map((item, index) => (
+        {items.map((item) => (
           <ScrollReveal
             key={item.name}
             className="flex flex-col items-center"

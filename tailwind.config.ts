@@ -63,8 +63,8 @@ export default {
           ring: 'hsl(var(--sidebar-ring))',
         },
         spring: {
-          mint: '#C3E6D4',
-          lavender: '#E6E6FA',
+          lavender: ' #BDB2FF',
+          mint: '#71d7aa',
           peach: '#FFD8C7',
           pink: '#FFD8E4',
           blush: '#FFB5CF',

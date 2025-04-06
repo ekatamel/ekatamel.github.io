@@ -1,30 +1,29 @@
-import React from 'react';
-import { Briefcase, Code, Award, Book } from 'lucide-react';
+import { Award, Briefcase, Code } from 'lucide-react';
 
 const stats = [
   {
     value: '6+',
     label: 'Years in IT',
     icon: Briefcase,
-    color: 'bg-spring-mint/20',
+    color: 'bg-spring-lavender/20',
   },
   {
     value: '9+',
     label: 'Apps Built',
     icon: Code,
-    color: 'bg-spring-peach/20',
+    color: 'bg-spring-blush/20',
   },
   {
     value: '4+',
     label: 'Years of React',
     icon: Code,
-    color: 'bg-spring-lavender/20',
+    color: 'bg-spring-mint/20',
   },
   {
     value: '3+',
     label: 'Certifications',
     icon: Award,
-    color: 'bg-spring-mint/20',
+    color: 'bg-spring-peach/20',
   },
 ];
 

@@ -1,5 +1,4 @@
-import React from 'react';
-import { Github, ExternalLink } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 
 const projects = [
@@ -99,7 +98,7 @@ const ProjectsSection = () => {
                     {project.technologies.map((tech, i) => (
                       <span
                         key={i}
-                        className="text-xs bg-spring-lavender/30 px-3 py-1 rounded-full"
+                        className="text-xs bg-spring-mint/30 px-3 py-1 rounded-full"
                       >
                         {tech}
                       </span>

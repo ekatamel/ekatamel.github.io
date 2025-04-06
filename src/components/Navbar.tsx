@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import { useEffect, useState } from 'react';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -29,34 +29,37 @@ const Navbar = () => {
     >
       <div className="container-section !py-0 flex justify-between items-center">
         <a href="#" className="text-xl font-semibold">
-          <span className="text-spring-mint">E</span>katerina
+          <span className="text-spring-lavender">E</span>katerina
         </a>
 
         <div className="hidden md:flex space-x-8 text-sm font-medium">
-          <a href="#about" className="hover:text-spring-mint transition-colors">
+          <a
+            href="#about"
+            className="hover:text-spring-lavender transition-colors"
+          >
             About
           </a>
           <a
             href="#skills"
-            className="hover:text-spring-mint transition-colors"
+            className="hover:text-spring-lavender transition-colors"
           >
             Skills
           </a>
           <a
             href="#experience"
-            className="hover:text-spring-mint transition-colors"
+            className="hover:text-spring-lavender transition-colors"
           >
             Experience
           </a>
           <a
             href="#projects"
-            className="hover:text-spring-mint transition-colors"
+            className="hover:text-spring-lavender transition-colors"
           >
             Projects
           </a>
           <a
             href="#contact"
-            className="hover:text-spring-mint transition-colors"
+            className="hover:text-spring-lavender transition-colors"
           >
             Contact
           </a>

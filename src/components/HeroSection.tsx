@@ -1,6 +1,4 @@
-import React from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
-import ScrollReveal from './ScrollReveal';
 
 const HeroSection = () => {
   return (
@@ -12,15 +10,15 @@ const HeroSection = () => {
         <div className="lg:w-3/4 animate-fade-in">
           <div className="mb-8">
             <div className="flex space-x-3 mb-4">
-              <span className="px-3 py-1 text-sm rounded-full bg-spring-lavender/50 text-spring-charcoal">
+              <span className="px-3 py-1 text-sm rounded-full bg-spring-mint/50 text-spring-charcoal">
                 Frontend Developer
               </span>
-              <span className="px-3 py-1 text-sm rounded-full bg-spring-peach/50 text-spring-charcoal">
+              <span className="px-3 py-1 text-sm rounded-full bg-spring-blush/50 text-spring-charcoal">
                 Full Stack Engineer
               </span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
-              Hi, I'm <span className="text-spring-mint">Ekaterina</span>{' '}
+              Hi, I'm <span className="text-spring-lavender">Ekaterina</span>{' '}
               Melnichuk
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl">
@@ -43,7 +41,7 @@ const HeroSection = () => {
           <div className="mt-8 flex space-x-4">
             <a
               href="https://github.com/ekatamel"
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 hover:bg-spring-mint hover:border-spring-mint transition-colors"
+              className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 hover:bg-spring-lavender hover:border-spring-lavender transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -51,7 +49,7 @@ const HeroSection = () => {
             </a>
             <a
               href="https://linkedin.com/in/ekaterinamelnichuk"
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 hover:bg-spring-mint hover:border-spring-mint transition-colors"
+              className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 hover:bg-spring-lavender hover:border-spring-lavender transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -59,7 +57,7 @@ const HeroSection = () => {
             </a>
             <a
               href="mailto:eka.melnichuk@gmail.com"
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 hover:bg-spring-mint hover:border-spring-mint transition-colors"
+              className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 hover:bg-spring-lavender hover:border-spring-lavender transition-colors"
             >
               <Mail size={18} />
             </a>
