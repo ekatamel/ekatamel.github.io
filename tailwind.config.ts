@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -64,11 +63,10 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				spring: {
-					mint: '#C3E6D4',
-					lavender: '#E6E6FA',
-					peach: '#FFD8C7',
-					pink: '#FFD8E4',
-					blush: '#FFB5CF',
+					mint: '#7DDAA3',
+					lavender: '#BDB2FF',
+					pink: '#FFB5CF',
+					blush: '#FF99B7',
 					soft: '#F8F9FA',
 					charcoal: '#333333'
 				}
