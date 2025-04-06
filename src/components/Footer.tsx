@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row justify-between items-center">
           <div className="mb-4 sm:mb-0">
             <a href="#" className="text-xl font-semibold">
-              <span className="text-spring-blush">E</span>katerina <span className="text-spring-blush">M</span>elnichuk
+              <span className="text-spring-mint">E</span>katerina <span className="text-spring-mint">M</span>elnichuk
             </a>
           </div>
           

@@ -21,7 +21,14 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('active');
+            if (ref.current) {
+              ref.current.classList.add('active');
+              // Apply the animation class directly
+              const animClass = ref.current.getAttribute('data-animation-class');
+              if (animClass) {
+                ref.current.classList.add(animClass);
+              }
+            }
             observer.unobserve(entry.target);
           }
         });
@@ -34,6 +41,8 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
     );
 
     if (ref.current) {
+      // Start with opacity-0 to hide, but don't use the animation class yet
+      ref.current.classList.add('opacity-0');
       observer.observe(ref.current);
     }
 
@@ -42,7 +51,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
         observer.unobserve(ref.current);
       }
     };
-  }, [threshold]);
+  }, [threshold, animationClass]);
 
   return (
     <div 
