@@ -94,12 +94,13 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({
         {title}
       </h3>
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
-        {items.map((item) => (
+        {items.map((item, index) => (
           <ScrollReveal
             key={item.name}
             className="flex flex-col items-center"
             animationClass={`animate-pop-in`}
-            threshold={0.2}
+            threshold={0.6}
+            delay={delay + index * 100} // Stagger the animation of individual items
           >
             <div className="tech-icon mb-2">{item.icon}</div>
             <span className="text-xs text-center">{item.name}</span>

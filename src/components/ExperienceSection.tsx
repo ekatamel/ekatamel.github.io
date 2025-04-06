@@ -68,7 +68,7 @@ const ExperienceSection = () => {
               key={index}
               className="relative pl-12 sm:pl-16 pb-12"
               animationClass={`animate-fade-in-up`}
-              threshold={0.15}
+              threshold={0.6}
             >
               <div className="absolute left-0 sm:left-4 top-2 w-8 h-8 rounded-full bg-white shadow-md border-2 border-spring-mint flex items-center justify-center">
                 <Briefcase className="w-4 h-4 text-spring-mint" />

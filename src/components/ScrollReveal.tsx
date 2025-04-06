@@ -5,15 +5,18 @@ interface ScrollRevealProps {
   className?: string;
   animationClass?: string;
   threshold?: number;
+  delay?: number; // Add the delay prop
 }
 
 const ScrollReveal: React.FC<ScrollRevealProps> = ({
   children,
   className = '',
   animationClass = 'animate-fade-in',
-  threshold = 0.1,
+  threshold = 0.5,
+  delay = 0, // Default delay to 0
 }) => {
   const ref = useRef<HTMLDivElement>(null);
+  const timeoutId = useRef<NodeJS.Timeout | null>(null); // To clear any pending timeouts
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -21,16 +24,41 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             if (ref.current) {
-              ref.current.classList.add('active');
-              // Apply the animation class directly
+              // Clear any previous timeout
+              if (timeoutId.current) {
+                clearTimeout(timeoutId.current);
+              }
+
+              // Apply the active class and animation with a delay
+              timeoutId.current = setTimeout(() => {
+                if (ref.current) {
+                  ref.current.classList.add('active');
+                  const animClass = ref.current.getAttribute(
+                    'data-animation-class'
+                  );
+                  if (animClass) {
+                    ref.current.classList.add(animClass);
+                  }
+                  // Apply the transition delay
+                  if (delay > 0) {
+                    ref.current.style.transitionDelay = `${delay}ms`;
+                  }
+                }
+              }, 0); // Start the timeout immediately upon intersection
+            }
+            // Don't unobserve to handle elements going in and out of view
+          } else {
+            // Optionally reset styles if the element is no longer intersecting
+            if (ref.current) {
+              ref.current.classList.remove('active');
               const animClass = ref.current.getAttribute(
                 'data-animation-class'
               );
               if (animClass) {
-                ref.current.classList.add(animClass);
+                ref.current.classList.remove(animClass);
               }
+              ref.current.style.transitionDelay = ''; // Reset transition delay
             }
-            // Don't unobserve to handle cases where the element goes in and out of view
           }
         });
       },
@@ -42,7 +70,6 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
     );
 
     if (ref.current) {
-      // Start with opacity-0 to hide, but don't use the animation class yet
       ref.current.classList.add('opacity-0');
       observer.observe(ref.current);
     }
@@ -51,8 +78,11 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
       if (ref.current) {
         observer.unobserve(ref.current);
       }
+      if (timeoutId.current) {
+        clearTimeout(timeoutId.current);
+      }
     };
-  }, [threshold, animationClass]);
+  }, [threshold, animationClass, delay]); // Include delay in the dependency array
 
   return (
     <div
