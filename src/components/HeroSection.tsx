@@ -1,5 +1,8 @@
 import { Mail } from 'lucide-react';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
+import process from '../assets/icons/process.png';
+import speed from '../assets/icons/speed.png';
+import statistics from '../assets/icons/statistics.png';
 
 // TODO: animation for underlime
 const HeroSection = () => {
@@ -43,15 +46,20 @@ const HeroSection = () => {
             </p>
             {/* TODO make shared style for ul list */}
             <ul className="text-lg text-gray-600 mb-8">
-              <li className="text-gray-600 pl-5 relative before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-spring-lavender before:rounded-full">
-                Boosting performance (cutting load times, optimizing Web
+              <li className="flex gap-4 items-center mb-4">
+                <img src={speed} alt="Speed icon" className="w-10" />
+                <b>Boosting performance</b> (cutting load times, optimizing Web
                 Vitals),
               </li>
-              <li className="text-gray-600 pl-5 relative before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-spring-lavender before:rounded-full">
-                Automating workflows (replacing manual work with scalable code),
+              <li className="flex gap-4 items-center mb-4">
+                <img src={process} alt="Process icon" className="w-10" />
+                <b>Automating workflows</b> (replacing manual work with scalable
+                code),
               </li>
-              <li className="text-gray-600 pl-5 relative before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-spring-lavender before:rounded-full">
-                Driving growth (A/B tested UI, SEO wins, and user acquisition)
+              <li className="flex gap-4 items-center mb-4">
+                <img src={statistics} alt="Statistics icon" className="w-10" />
+                <b>Driving growth</b> (A/B tested UI, SEO wins, and user
+                acquisition)
               </li>
             </ul>
 

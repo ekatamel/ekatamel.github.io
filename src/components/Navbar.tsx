@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils';
 import { useEffect, useState } from 'react';
+import myLogo from '../assets/logo/personal.png';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -29,7 +30,7 @@ const Navbar = () => {
     >
       <div className="container-section !py-0 flex justify-between items-center">
         <a href="#" className="text-xl font-semibold">
-          <span className="text-spring-lavender">E</span>katerina
+          <img src={myLogo} alt="Personal logo" className="h-10" />
         </a>
 
         <div className="hidden md:flex space-x-8 text-sm font-medium">
