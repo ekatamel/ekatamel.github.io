@@ -13,7 +13,7 @@ const HeroSection = () => {
               <span className="px-3 py-1 text-sm rounded-full bg-spring-lavender/50 text-spring-charcoal">
                 Frontend Developer
               </span>
-              <span className="px-3 py-1 text-sm rounded-full bg-spring-mint/50 text-spring-charcoal">
+              <span className="px-3 py-1 text-sm rounded-full bg-spring-peach/50 text-spring-charcoal">
                 Full Stack Engineer
               </span>
             </div>

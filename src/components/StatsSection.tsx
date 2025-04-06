@@ -13,13 +13,13 @@ const stats = [
     value: '9+',
     label: 'Apps Built',
     icon: Code,
-    color: 'bg-spring-lavender/20'
+    color: 'bg-spring-peach/20'
   },
   {
     value: '4+',
     label: 'Years of React',
     icon: Code,
-    color: 'bg-spring-pink/20'
+    color: 'bg-spring-lavender/20'
   },
   {
     value: '3+',

@@ -82,7 +82,7 @@ const ExperienceSection = () => {
                     <h3 className="text-xl font-semibold">{exp.title}</h3>
                     <div className="text-gray-600 mb-1">{exp.company} | {exp.location}</div>
                   </div>
-                  <span className="text-sm bg-spring-lavender/20 px-3 py-1 rounded-full mt-1">
+                  <span className="text-sm bg-spring-peach/20 px-3 py-1 rounded-full mt-1">
                     {exp.period}
                   </span>
                 </div>
