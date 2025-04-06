@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 
 interface ScrollRevealProps {
@@ -8,11 +7,11 @@ interface ScrollRevealProps {
   threshold?: number;
 }
 
-const ScrollReveal: React.FC<ScrollRevealProps> = ({ 
-  children, 
-  className = '', 
+const ScrollReveal: React.FC<ScrollRevealProps> = ({
+  children,
+  className = '',
   animationClass = 'animate-fade-in',
-  threshold = 0.1
+  threshold = 0.1,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -24,7 +23,9 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
             if (ref.current) {
               ref.current.classList.add('active');
               // Apply the animation class directly
-              const animClass = ref.current.getAttribute('data-animation-class');
+              const animClass = ref.current.getAttribute(
+                'data-animation-class'
+              );
               if (animClass) {
                 ref.current.classList.add(animClass);
               }
@@ -54,8 +55,8 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
   }, [threshold, animationClass]);
 
   return (
-    <div 
-      ref={ref} 
+    <div
+      ref={ref}
       className={`scroll-reveal ${className || ''}`}
       data-animation-class={animationClass}
     >
