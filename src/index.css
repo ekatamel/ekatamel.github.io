@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -15,16 +16,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 13% 20%;
 
-    --primary: 153 40% 83%;
+    --primary: 258 67% 94%;
     --primary-foreground: 220 13% 20%;
 
-    --secondary: 24 100% 89%;
+    --secondary: 153 40% 83%;
     --secondary-foreground: 220 13% 20%;
 
     --muted: 240 13% 97%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 258 67% 94%;
+    --accent: 24 100% 89%;
     --accent-foreground: 220 13% 20%;
 
     --destructive: 0 84.2% 60.2%;
@@ -32,7 +33,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 153 40% 83%;
+    --ring: 258 67% 94%;
 
     --radius: 0.5rem;
 
@@ -71,19 +72,19 @@
   
   .section-title::after {
     content: '';
-    @apply absolute left-0 -bottom-2 h-1 w-2/3 bg-spring-mint rounded-full;
+    @apply absolute left-0 -bottom-2 h-1 w-2/3 bg-spring-lavender rounded-full;
   }
   
   .btn-primary {
-    @apply px-6 py-3 bg-spring-mint text-spring-charcoal font-medium rounded-md transition-all hover:shadow-md hover:translate-y-[-2px];
+    @apply px-6 py-3 bg-spring-lavender text-spring-charcoal font-medium rounded-md transition-all hover:shadow-md hover:translate-y-[-2px];
   }
   
   .btn-secondary {
-    @apply px-6 py-3 bg-spring-peach text-spring-charcoal font-medium rounded-md transition-all hover:shadow-md hover:translate-y-[-2px];
+    @apply px-6 py-3 bg-spring-mint text-spring-charcoal font-medium rounded-md transition-all hover:shadow-md hover:translate-y-[-2px];
   }
   
   .btn-outline {
-    @apply px-6 py-3 border border-spring-pink text-spring-charcoal font-medium rounded-md transition-all hover:bg-spring-pink hover:bg-opacity-10;
+    @apply px-6 py-3 border border-spring-peach text-spring-charcoal font-medium rounded-md transition-all hover:bg-spring-peach hover:bg-opacity-10;
   }
   
   .card {
@@ -101,6 +102,6 @@
   
   .tech-icon {
     @apply w-16 h-16 flex items-center justify-center rounded-xl bg-white shadow-sm border border-gray-100 
-           transition-all duration-300 hover:scale-110 hover:shadow-md hover:border-spring-pink;
+           transition-all duration-300 hover:scale-110 hover:shadow-md hover:border-spring-lavender;
   }
 }

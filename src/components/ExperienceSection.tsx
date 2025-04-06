@@ -63,33 +63,33 @@ const ExperienceSection = () => {
       <div className="container-section">
         <h2 className="section-title">Professional Experience</h2>
         <div className="relative">
-          <div className="absolute left-4 sm:left-8 top-0 bottom-0 w-0.5 bg-spring-pink"></div>
+          <div className="absolute left-4 sm:left-8 top-0 bottom-0 w-0.5 bg-spring-lavender"></div>
           
           {experiences.map((exp, index) => (
             <ScrollReveal 
               key={index} 
               className="relative pl-12 sm:pl-16 pb-12"
-              animationClass={`animate-fade-in-up delay-[${index * 150}ms]`}
+              animationClass={`animate-fade-in-up`}
               threshold={0.15}
             >
-              <div className="absolute left-0 sm:left-4 top-2 w-8 h-8 rounded-full bg-white shadow-md border-2 border-spring-pink flex items-center justify-center">
-                <Briefcase className="w-4 h-4 text-spring-pink" />
+              <div className="absolute left-0 sm:left-4 top-2 w-8 h-8 rounded-full bg-white shadow-md border-2 border-spring-lavender flex items-center justify-center">
+                <Briefcase className="w-4 h-4 text-spring-lavender" />
               </div>
               
-              <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100 transition-all duration-300 hover:shadow-md hover:border-spring-pink/30">
+              <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100 transition-all duration-300 hover:shadow-md hover:border-spring-lavender/30">
                 <div className="flex flex-wrap justify-between items-start mb-4">
                   <div>
                     <h3 className="text-xl font-semibold">{exp.title}</h3>
                     <div className="text-gray-600 mb-1">{exp.company} | {exp.location}</div>
                   </div>
-                  <span className="text-sm bg-spring-pink/20 px-3 py-1 rounded-full mt-1">
+                  <span className="text-sm bg-spring-peach/20 px-3 py-1 rounded-full mt-1">
                     {exp.period}
                   </span>
                 </div>
                 
                 <ul className="space-y-2">
                   {exp.responsibilities.map((item, i) => (
-                    <li key={i} className="text-gray-600 pl-5 relative before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-spring-peach before:rounded-full">
+                    <li key={i} className="text-gray-600 pl-5 relative before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-spring-mint before:rounded-full">
                       {item}
                     </li>
                   ))}

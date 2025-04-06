@@ -57,14 +57,19 @@ interface SkillCategoryProps {
 
 const SkillCategory: React.FC<SkillCategoryProps> = ({ title, items, delay }) => {
   return (
-    <div className="mb-10">
+    <ScrollReveal
+      className="mb-10"
+      animationClass="animate-fade-in-up"
+      threshold={0.2}
+    >
       <h3 className="text-xl font-semibold mb-6 text-spring-charcoal">{title}</h3>
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
         {items.map((item, index) => (
           <ScrollReveal 
             key={item.name} 
             className="flex flex-col items-center"
-            animationClass={`animate-pop-in delay-[${(index * 100) + delay}ms]`}
+            animationClass={`animate-pop-in`}
+            threshold={0.2}
           >
             <div className="tech-icon mb-2">
               {item.icon}
@@ -73,7 +78,7 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({ title, items, delay }) =>
           </ScrollReveal>
         ))}
       </div>
-    </div>
+    </ScrollReveal>
   );
 };
 

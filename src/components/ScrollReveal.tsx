@@ -29,7 +29,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
                 ref.current.classList.add(animClass);
               }
             }
-            observer.unobserve(entry.target);
+            // Don't unobserve to handle cases where the element goes in and out of view
           }
         });
       },
