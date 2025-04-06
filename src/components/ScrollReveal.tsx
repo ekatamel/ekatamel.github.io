@@ -5,7 +5,7 @@ interface ScrollRevealProps {
   className?: string;
   animationClass?: string;
   threshold?: number;
-  delay?: number; // Add the delay prop
+  delay?: number;
 }
 
 const ScrollReveal: React.FC<ScrollRevealProps> = ({
@@ -13,7 +13,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
   className = '',
   animationClass = 'animate-fade-in',
   threshold = 0.5,
-  delay = 0, // Default delay to 0
+  delay = 0,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const timeoutId = useRef<NodeJS.Timeout | null>(null); // To clear any pending timeouts
@@ -37,16 +37,18 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
                     'data-animation-class'
                   );
                   if (animClass) {
-                    ref.current.classList.add(animClass);
+                    // Split classes by space and add each one
+                    animClass.split(' ').forEach((cls) => {
+                      ref.current?.classList.add(cls);
+                    });
                   }
                   // Apply the transition delay
                   if (delay > 0) {
                     ref.current.style.transitionDelay = `${delay}ms`;
                   }
                 }
-              }, 0); // Start the timeout immediately upon intersection
+              }, 0);
             }
-            // Don't unobserve to handle elements going in and out of view
           } else {
             // Optionally reset styles if the element is no longer intersecting
             if (ref.current) {
@@ -55,7 +57,10 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
                 'data-animation-class'
               );
               if (animClass) {
-                ref.current.classList.remove(animClass);
+                // Split classes by space and remove each one
+                animClass.split(' ').forEach((cls) => {
+                  ref.current?.classList.remove(cls);
+                });
               }
               ref.current.style.transitionDelay = ''; // Reset transition delay
             }
